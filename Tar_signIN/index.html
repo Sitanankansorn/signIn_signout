@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-box">
+            <div class="logo">
+                <span>✦</span>
+            </div>
+            <div class="tabs">
+                <div class="tab active" data-tab="login">Login</div>
+                <div class="tab" data-tab="signup">Sign Up</div>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="form active">
+                <h2>Welcome Back</h2>
+                <div class="input-field">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="input-field">
+                    <label>Password</label>
+                    <input type="password" required>
+                </div>
+                <div class="remember">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <button type="submit">Login</button>
+                <a href="#" class="forgot">Forgot Password?</a>
+            </form>
+
+            <!-- Sign Up Form -->
+            <form id="signupForm" class="form">
+                <h2>Create Account</h2>
+                <div class="input-field">
+                    <label>Full Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="input-field">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="input-field">
+                    <label>Password</label>
+                    <input type="password" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

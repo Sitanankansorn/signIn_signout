@@ -1,0 +1,176 @@
+:root {
+    --primary-color: #8B5CF6;
+    --secondary-color: #7C3AED;
+    --background-color: #1F1F1F;
+    --surface-color: #2D2D2D;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0A0A0;
+    --error-color: #EF4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--background-color);
+    color: var(--text-primary);
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.auth-box {
+    background: var(--surface-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.logo {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.logo span {
+    color: var(--primary-color);
+    font-size: 32px;
+}
+
+.tabs {
+    display: flex;
+    background: rgba(139, 92, 246, 0.1);
+    margin: 0 20px;
+    border-radius: 8px;
+}
+
+.tab {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-secondary);
+    border-radius: 8px;
+}
+
+.tab.active {
+    background: var(--primary-color);
+    color: var(--text-primary);
+}
+
+.form {
+    padding: 30px;
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+h2 {
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.input-field {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-primary);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.remember input {
+    width: auto;
+    margin-right: 8px;
+}
+
+.remember label {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-1px);
+}
+
+.forgot {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form.active {
+    animation: fadeIn 0.5s ease forwards;
+}
